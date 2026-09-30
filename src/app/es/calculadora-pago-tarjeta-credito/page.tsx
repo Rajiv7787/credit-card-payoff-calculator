@@ -60,9 +60,7 @@ export default function Home() {
       );
 
       if (principalPayment <= 0) {
-        setError(
-          "El pago no es suficiente para reducir el saldo."
-        );
+        setError("El pago no es suficiente para reducir el saldo.");
         return;
       }
 
@@ -72,9 +70,7 @@ export default function Home() {
     }
 
     if (numberOfMonths >= 1200) {
-      setError(
-        "El período de pago es demasiado largo para calcularlo."
-      );
+      setError("El período de pago es demasiado largo para calcularlo.");
       return;
     }
 
@@ -107,49 +103,39 @@ export default function Home() {
           </Link>
 
           <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
-            <a
-              href="#calculadora"
-              className="text-slate-600 hover:text-blue-600"
-            >
+            <a href="#calculadora" className="text-slate-600 hover:text-blue-600">
               Calculadora
             </a>
 
-            <a
-              href="#como-funciona"
-              className="text-slate-600 hover:text-blue-600"
-            >
+            <a href="#como-funciona" className="text-slate-600 hover:text-blue-600">
               Cómo funciona
             </a>
 
-            <a
-              href="#preguntas"
-              className="text-slate-600 hover:text-blue-600"
-            >
+            <a href="#preguntas" className="text-slate-600 hover:text-blue-600">
               Preguntas
             </a>
           </nav>
 
           <div className="flex overflow-hidden rounded-lg border border-slate-300 bg-white text-sm">
-            <a
-              href="/en/credit-card-payoff-calculator"
+            <Link
+              href="/"
               className="px-3 py-2 font-medium text-slate-700 hover:bg-slate-100"
             >
               English
-            </a>
+            </Link>
 
-            <a
-              href="/es/calculadora-pago-tarjeta-credito"
+            <Link
+              href="/es/"
               className="bg-slate-900 px-3 py-2 font-medium text-white"
             >
               Español
-            </a>
+            </Link>
           </div>
-
         </div>
       </header>
 
       {/* Hero */}
-      <section className="bg-gradient-to-b from-blue-50 to-slate-50 px-4 py-14 sm:py-20">
+      <section className="bg-gradient-to-b from-blue-50 to-slate-50 px-4 py-16 sm:py-20">
         <div className="mx-auto max-w-4xl text-center">
 
           <div className="mb-5 inline-flex rounded-full border border-blue-200 bg-white px-4 py-2 text-sm font-medium text-blue-700 shadow-sm">
@@ -164,18 +150,17 @@ export default function Home() {
           </h1>
 
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-600">
-            Descubre cuánto tiempo puede tomar pagar tu tarjeta de
-            crédito, estima los intereses totales y comprueba cómo
-            tu pago mensual afecta tu deuda.
+            Descubre cuánto tiempo puede tomar pagar tu tarjeta de crédito,
+            estima los intereses totales y comprueba cómo tu pago mensual
+            afecta tu deuda.
           </p>
 
           <a
             href="#calculadora"
-            className="mt-8 inline-flex rounded-xl bg-blue-600 px-7 py-3.5 font-semibold text-white shadow-lg shadow-blue-600/20 transition hover:bg-blue-700"
+            className="mt-8 inline-flex rounded-xl bg-blue-600 px-7 py-3.5 font-semibold text-white shadow-lg shadow-blue-600/20 hover:bg-blue-700"
           >
             Calcular mi deuda ↓
           </a>
-
         </div>
       </section>
 
@@ -184,26 +169,23 @@ export default function Home() {
         <div className="mx-auto max-w-6xl">
 
           <div className="overflow-hidden rounded-3xl bg-white shadow-xl ring-1 ring-slate-200">
-
             <div className="grid lg:grid-cols-2">
 
               {/* Form */}
               <div className="p-6 sm:p-10">
 
-                <div>
-                  <p className="text-sm font-semibold uppercase tracking-wide text-blue-600">
-                    Paso 1
-                  </p>
+                <p className="text-sm font-semibold uppercase tracking-wide text-blue-600">
+                  Paso 1
+                </p>
 
-                  <h2 className="mt-1 text-2xl font-bold sm:text-3xl">
-                    Ingresa los datos de tu tarjeta
-                  </h2>
+                <h2 className="mt-1 text-2xl font-bold sm:text-3xl">
+                  Ingresa los datos de tu tarjeta
+                </h2>
 
-                  <p className="mt-3 leading-7 text-slate-600">
-                    Introduce tu saldo actual, APR y la cantidad que
-                    planeas pagar cada mes.
-                  </p>
-                </div>
+                <p className="mt-3 leading-7 text-slate-600">
+                  Introduce tu saldo actual, APR y la cantidad que planeas
+                  pagar cada mes.
+                </p>
 
                 <div className="mt-8 space-y-5">
 
@@ -229,7 +211,7 @@ export default function Home() {
                         value={balance}
                         onChange={(e) => setBalance(e.target.value)}
                         placeholder="5,000"
-                        className="w-full rounded-xl border border-slate-300 bg-white py-3.5 pl-9 pr-4 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
+                        className="w-full rounded-xl border border-slate-300 bg-white py-3.5 pl-9 pr-4 outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
                       />
                     </div>
                   </div>
@@ -252,7 +234,7 @@ export default function Home() {
                         value={apr}
                         onChange={(e) => setApr(e.target.value)}
                         placeholder="24.99"
-                        className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3.5 pr-12 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
+                        className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3.5 pr-12 outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
                       />
 
                       <span className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400">
@@ -283,12 +265,11 @@ export default function Home() {
                         value={payment}
                         onChange={(e) => setPayment(e.target.value)}
                         placeholder="200"
-                        className="w-full rounded-xl border border-slate-300 bg-white py-3.5 pl-9 pr-4 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
+                        className="w-full rounded-xl border border-slate-300 bg-white py-3.5 pl-9 pr-4 outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
                       />
                     </div>
                   </div>
 
-                  {/* Error */}
                   {error && (
                     <div
                       role="alert"
@@ -301,16 +282,15 @@ export default function Home() {
                   <button
                     type="button"
                     onClick={calculatePayoff}
-                    className="w-full rounded-xl bg-blue-600 px-5 py-4 font-semibold text-white shadow-lg shadow-blue-600/20 transition hover:bg-blue-700 active:scale-[0.99]"
+                    className="w-full rounded-xl bg-blue-600 px-5 py-4 font-semibold text-white shadow-lg shadow-blue-600/20 hover:bg-blue-700"
                   >
                     Calcular pago →
                   </button>
 
                   <p className="text-center text-xs text-slate-500">
-                    Los resultados son estimaciones y pueden diferir
-                    de los cálculos de tu emisor de tarjeta.
+                    Los resultados son estimaciones y pueden diferir de los
+                    cálculos de tu emisor de tarjeta.
                   </p>
-
                 </div>
               </div>
 
@@ -326,7 +306,6 @@ export default function Home() {
                 </h2>
 
                 <div className="mt-8 rounded-2xl bg-white/10 p-6 ring-1 ring-white/10">
-
                   <p className="text-sm text-slate-400">
                     Tiempo estimado para liquidar
                   </p>
@@ -340,7 +319,6 @@ export default function Home() {
                   <p className="mt-2 text-sm text-slate-400">
                     Basado en el saldo, APR y pago mensual que ingresaste.
                   </p>
-
                 </div>
 
                 <div className="mt-5 grid gap-4 sm:grid-cols-2">
@@ -374,29 +352,26 @@ export default function Home() {
                     </p>
 
                     <p className="mt-2 text-sm leading-6 text-slate-300">
-                      Aumentar tu pago mensual puede ayudarte a
-                      liquidar el saldo más rápido y reducir los
-                      intereses pagados con el tiempo.
+                      Aumentar tu pago mensual puede ayudarte a liquidar el
+                      saldo más rápido y reducir los intereses pagados con el
+                      tiempo.
                     </p>
                   </div>
                 )}
-
               </div>
-
             </div>
           </div>
-
         </div>
       </section>
 
-      {/* Ad placeholder */}
+      {/* Ad */}
       <section className="px-4">
         <div className="mx-auto flex h-24 max-w-6xl items-center justify-center rounded-xl border border-dashed border-slate-300 bg-white text-sm text-slate-400">
           Publicidad
         </div>
       </section>
 
-      {/* How It Works */}
+      {/* How it works */}
       <section
         id="como-funciona"
         className="border-y border-slate-200 bg-white px-4 py-20"
@@ -413,8 +388,8 @@ export default function Home() {
             </h2>
 
             <p className="mx-auto mt-4 max-w-2xl leading-7 text-slate-600">
-              La calculadora utiliza tu saldo, APR y pago mensual para
-              estimar cuánto tiempo puede tomar liquidar tu tarjeta.
+              La calculadora utiliza tu saldo, APR y pago mensual para estimar
+              cuánto tiempo puede tomar liquidar tu tarjeta.
             </p>
           </div>
 
@@ -430,8 +405,8 @@ export default function Home() {
               </h3>
 
               <p className="mt-3 text-sm leading-6 text-slate-600">
-                Introduce la cantidad que actualmente debes en tu
-                tarjeta de crédito.
+                Introduce la cantidad que actualmente debes en tu tarjeta de
+                crédito.
               </p>
             </div>
 
@@ -445,8 +420,8 @@ export default function Home() {
               </h3>
 
               <p className="mt-3 text-sm leading-6 text-slate-600">
-                Introduce la tasa porcentual anual que aparece en
-                el estado de cuenta de tu tarjeta.
+                Introduce la tasa porcentual anual que aparece en el estado de
+                cuenta de tu tarjeta.
               </p>
             </div>
 
@@ -465,7 +440,6 @@ export default function Home() {
             </div>
 
           </div>
-
         </div>
       </section>
 
@@ -480,42 +454,38 @@ export default function Home() {
           <div className="mt-6 space-y-5 leading-8 text-slate-600">
 
             <p>
-              Las deudas de tarjetas de crédito pueden tardar más
-              tiempo en pagarse cuando los intereses continúan
-              acumulándose cada mes. Conocer tu saldo, APR y pago
-              mensual puede ayudarte a entender el costo de tu deuda.
+              Las deudas de tarjetas de crédito pueden tardar más tiempo en
+              pagarse cuando los intereses continúan acumulándose cada mes.
+              Conocer tu saldo, APR y pago mensual puede ayudarte a entender el
+              costo de tu deuda.
             </p>
 
             <p>
-              Una calculadora de pago de tarjeta de crédito proporciona
-              una estimación del número de meses necesarios para
-              liquidar un saldo cuando realizas pagos mensuales
-              constantes y la tasa de interés permanece sin cambios.
+              Una calculadora de pago de tarjeta de crédito proporciona una
+              estimación del número de meses necesarios para liquidar un saldo
+              cuando realizas pagos mensuales constantes y la tasa de interés
+              permanece sin cambios.
             </p>
 
             <p>
-              Pagar más que el pago mínimo puede reducir el tiempo
-              necesario para liquidar un saldo. También puede reducir
-              la cantidad de intereses acumulados durante el período
-              de pago.
+              Pagar más que el pago mínimo puede reducir el tiempo necesario
+              para liquidar un saldo. También puede reducir la cantidad de
+              intereses acumulados durante el período de pago.
             </p>
 
             <p>
-              Los estados de cuenta reales pueden utilizar cálculos
-              diarios de intereses y pueden incluir cargos, diferentes
-              fechas de pago, tasas promocionales u otras condiciones.
-              Por eso, los resultados de esta calculadora deben
-              considerarse estimaciones.
+              Los estados de cuenta reales pueden utilizar cálculos diarios de
+              intereses y pueden incluir cargos, diferentes fechas de pago,
+              tasas promocionales u otras condiciones. Por eso, los resultados
+              de esta calculadora deben considerarse estimaciones.
             </p>
 
           </div>
-
         </div>
       </section>
 
       {/* FAQ */}
       <section id="preguntas" className="bg-slate-100 px-4 py-20">
-
         <div className="mx-auto max-w-4xl">
 
           <div className="text-center">
@@ -536,9 +506,9 @@ export default function Home() {
               </summary>
 
               <p className="mt-4 leading-7 text-slate-600">
-                Es una herramienta que estima cuánto tiempo puede
-                tomar pagar una deuda de tarjeta de crédito según
-                el saldo, la tasa de interés y el pago mensual.
+                Es una herramienta que estima cuánto tiempo puede tomar pagar
+                una deuda de tarjeta de crédito según el saldo, la tasa de
+                interés y el pago mensual.
               </p>
             </details>
 
@@ -548,9 +518,9 @@ export default function Home() {
               </summary>
 
               <p className="mt-4 leading-7 text-slate-600">
-                Generalmente, realizar pagos mayores puede reducir
-                el tiempo durante el cual mantienes un saldo y puede
-                reducir el total de intereses pagados.
+                Generalmente, realizar pagos mayores puede reducir el tiempo
+                durante el cual mantienes un saldo y puede reducir el total de
+                intereses pagados.
               </p>
             </details>
 
@@ -561,8 +531,8 @@ export default function Home() {
 
               <p className="mt-4 leading-7 text-slate-600">
                 Los emisores de tarjetas pueden calcular los intereses
-                utilizando saldos diarios y pueden aplicar cargos,
-                diferentes fechas de pago o tasas promocionales.
+                utilizando saldos diarios y pueden aplicar cargos, diferentes
+                fechas de pago o tasas promocionales.
               </p>
             </details>
 
@@ -572,50 +542,50 @@ export default function Home() {
               </summary>
 
               <p className="mt-4 leading-7 text-slate-600">
-                No. Esta calculadora se proporciona únicamente con
-                fines educativos e informativos. Los resultados son
-                estimaciones.
+                No. Esta calculadora se proporciona únicamente con fines
+                educativos e informativos. Los resultados son estimaciones.
               </p>
             </details>
 
           </div>
-
         </div>
       </section>
 
       {/* Footer */}
       <footer className="bg-slate-950 px-4 py-12 text-slate-300">
-
         <div className="mx-auto max-w-6xl">
 
-          <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-4">
+          <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-5">
 
+            {/* Marca */}
             <div>
               <h3 className="text-lg font-bold text-white">
                 Credit<span className="text-blue-400">Pay</span>
               </h3>
 
               <p className="mt-3 text-sm leading-6 text-slate-400">
-                Herramientas sencillas para ayudarte a comprender
-                cálculos financieros cotidianos.
+                Herramientas sencillas para ayudarte a comprender cálculos
+                cotidianos de finanzas personales.
               </p>
             </div>
 
+            {/* Calculadora */}
             <div>
               <h4 className="font-semibold text-white">
                 Calculadora
               </h4>
 
               <div className="mt-3 space-y-2 text-sm">
-                <a
-                  href="#calculadora"
+                <Link
+                  href="/es/calculadora-pago-tarjeta-credito"
                   className="block hover:text-white"
                 >
-                  Calculadora de pago
-                </a>
+                  Calculadora de pago de tarjeta de crédito
+                </Link>
               </div>
             </div>
 
+            {/* Recursos */}
             <div>
               <h4 className="font-semibold text-white">
                 Recursos
@@ -637,44 +607,98 @@ export default function Home() {
                 </a>
 
                 <Link
-                  href="/es/"
+                  href="/es/sobre-nosotros"
                   className="block hover:text-white"
                 >
-                  Inicio
+                  Sobre nosotros
+                </Link>
+
+                <Link
+                  href="/es/contacto"
+                  className="block hover:text-white"
+                >
+                  Contacto
                 </Link>
               </div>
             </div>
 
+            {/* Legal */}
+            <div>
+              <h4 className="font-semibold text-white">
+                Legal
+              </h4>
+
+              <div className="mt-3 space-y-2 text-sm">
+                <Link
+                  href="/es/privacidad"
+                  className="block hover:text-white"
+                >
+                  Política de Privacidad
+                </Link>
+
+                <Link
+                  href="/es/terminos"
+                  className="block hover:text-white"
+                >
+                  Términos y Condiciones
+                </Link>
+
+                <Link
+                  href="/es/descargo"
+                  className="block hover:text-white"
+                >
+                  Descargo de Responsabilidad
+                </Link>
+
+                <Link
+                  href="/es/politica-cookies"
+                  className="block hover:text-white"
+                >
+                  Política de Cookies
+                </Link>
+              </div>
+            </div>
+
+            {/* Idioma */}
             <div>
               <h4 className="font-semibold text-white">
                 Idioma
               </h4>
 
               <div className="mt-3 space-y-2 text-sm">
-                <a
-                  href="/en/credit-card-payoff-calculator"
+                <Link
+                  href="/"
                   className="block hover:text-white"
                 >
                   English
-                </a>
+                </Link>
 
-                <a
-                  href="/es/calculadora-pago-tarjeta-credito"
+                <Link
+                  href="/es/"
                   className="block hover:text-white"
                 >
                   Español
-                </a>
+                </Link>
               </div>
             </div>
 
           </div>
 
           <div className="mt-10 border-t border-white/10 pt-6 text-sm text-slate-500">
-            © 2026 CreditPay. Todos los derechos reservados.
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+
+              <p>
+                © 2026 CreditPay. Todos los derechos reservados.
+              </p>
+
+              <p>
+                Calculadoras financieras gratuitas con fines educativos.
+              </p>
+
+            </div>
           </div>
 
         </div>
-
       </footer>
 
     </main>

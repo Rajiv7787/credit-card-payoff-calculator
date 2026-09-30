@@ -581,99 +581,157 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-slate-950 px-4 py-12 text-slate-300">
+     {/* Footer */}
+<footer className="bg-slate-950 px-4 py-12 text-slate-300">
 
-        <div className="mx-auto max-w-6xl">
+  <div className="mx-auto max-w-6xl">
 
-          <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-4">
+    <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-5">
 
-            <div>
-              <h3 className="text-lg font-bold text-white">
-                Credit<span className="text-blue-400">Pay</span>
-              </h3>
+      {/* Brand */}
+      <div>
+        <h3 className="text-lg font-bold text-white">
+          Credit<span className="text-blue-400">Pay</span>
+        </h3>
 
-              <p className="mt-3 text-sm leading-6 text-slate-400">
-                Simple tools to help you understand everyday
-                personal finance calculations.
-              </p>
-            </div>
+        <p className="mt-3 text-sm leading-6 text-slate-400">
+          Simple tools to help you understand everyday
+          personal finance calculations.
+        </p>
+      </div>
 
-            <div>
-              <h4 className="font-semibold text-white">
-                Calculator
-              </h4>
+      {/* Calculator */}
+      <div>
+        <h4 className="font-semibold text-white">
+          Calculator
+        </h4>
 
-              <div className="mt-3 space-y-2 text-sm">
-                <a
-                  href="#calculator"
-                  className="block hover:text-white"
-                >
-                  Credit Card Payoff Calculator
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-white">
-                Resources
-              </h4>
-
-              <div className="mt-3 space-y-2 text-sm">
-                <a
-                  href="#how-it-works"
-                  className="block hover:text-white"
-                >
-                  How It Works
-                </a>
-
-                <a
-                  href="#faq"
-                  className="block hover:text-white"
-                >
-                  FAQ
-                </a>
-
-                <Link
-                  href="/"
-                  className="block hover:text-white"
-                >
-                  Home
-                </Link>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-white">
-                Language
-              </h4>
-
-              <div className="mt-3 space-y-2 text-sm">
-                <a
-                  href="/en/credit-card-payoff-calculator"
-                  className="block hover:text-white"
-                >
-                  English
-                </a>
-
-                <a
-                  href="/es/calculadora-pago-tarjeta-credito"
-                  className="block hover:text-white"
-                >
-                  Español
-                </a>
-              </div>
-            </div>
-
-          </div>
-
-          <div className="mt-10 border-t border-white/10 pt-6 text-sm text-slate-500">
-            © 2026 CreditPay. All rights reserved.
-          </div>
-
+        <div className="mt-3 space-y-2 text-sm">
+          <a
+            href="#calculator"
+            className="block hover:text-white"
+          >
+            Credit Card Payoff Calculator
+          </a>
         </div>
+      </div>
 
-      </footer>
+      {/* Resources */}
+      <div>
+        <h4 className="font-semibold text-white">
+          Resources
+        </h4>
+
+        <div className="mt-3 space-y-2 text-sm">
+          <a
+            href="#how-it-works"
+            className="block hover:text-white"
+          >
+            How It Works
+          </a>
+
+          <a
+            href="#faq"
+            className="block hover:text-white"
+          >
+            FAQ
+          </a>
+
+          <Link
+            href="/about"
+            className="block hover:text-white"
+          >
+            About Us
+          </Link>
+
+          <Link
+            href="/contact"
+            className="block hover:text-white"
+          >
+            Contact Us
+          </Link>
+        </div>
+      </div>
+
+      {/* Legal */}
+      <div>
+        <h4 className="font-semibold text-white">
+          Legal
+        </h4>
+
+        <div className="mt-3 space-y-2 text-sm">
+          <Link
+            href="/privacy-policy"
+            className="block hover:text-white"
+          >
+            Privacy Policy
+          </Link>
+
+          <Link
+            href="/terms"
+            className="block hover:text-white"
+          >
+            Terms & Conditions
+          </Link>
+
+          <Link
+            href="/disclaimer"
+            className="block hover:text-white"
+          >
+            Disclaimer
+          </Link>
+
+          <Link
+            href="/cookie-policy"
+            className="block hover:text-white"
+          >
+            Cookie Policy
+          </Link>
+        </div>
+      </div>
+
+      {/* Language */}
+      <div>
+        <h4 className="font-semibold text-white">
+          Language
+        </h4>
+
+        <div className="mt-3 space-y-2 text-sm">
+          <Link
+            href="/"
+            className="block hover:text-white"
+          >
+            English
+          </Link>
+
+          <Link
+            href="/es/"
+            className="block hover:text-white"
+          >
+            Español
+          </Link>
+        </div>
+      </div>
+
+    </div>
+
+    <div className="mt-10 border-t border-white/10 pt-6 text-sm text-slate-500">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+
+        <p>
+          © 2026 CreditPay. All rights reserved.
+        </p>
+
+        <p>
+          Free financial calculators for educational purposes.
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+
+</footer>
 
     </main>
   );
